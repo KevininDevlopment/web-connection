@@ -1,0 +1,23 @@
+﻿body {
+}
+
+table, th, tr, td {
+    
+    border: 2px solid blue;
+    padding: 0px 45px;
+    text-align: center;
+}
+
+h4 {
+    color: blue;
+}
+
+footer {
+    color: blue;
+    font-weight: 700;
+}
+
+#cusHeader {
+    color: blue;
+    font-weight: 700;
+}

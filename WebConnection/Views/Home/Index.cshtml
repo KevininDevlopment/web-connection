@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    @Styles.Render("~/Content/StyleSheet1.css")
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1 align="center";>Welcome to the official Adventure Works Cycle website!</h1>
+    <p align="center";>Below is a table that displays the latest 10 customers to join with our company. Please
+    reach out to them and ask for feedback.</p>
+    <h4 align="center"; id="cusHeader">Customers</h4>
+    <hr />
+    <table >
+        <tr>
+            <th>ID</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Company</th>
+            <th>Sales</th>
+            <th>Email</th>
+        </tr>
+        @foreach (Customer customer in Model)
+        {
+            <tr>
+                <td>@customer.CustomerID</td>
+                <td>@customer.FirstName</td>
+                <td>@customer.LastName</td>
+                <td>@customer.CompanyName</td>
+                <td>@customer.SalesPerson</td>
+                <td>@customer.EmailAddress</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
